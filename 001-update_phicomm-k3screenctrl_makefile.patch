@@ -1,0 +1,14 @@
+--- package/feeds/packages/phicomm-k3screenctrl/Makefile        2024-10-15 15:56:07.225115231 +0800
++++ package/feeds/packages/phicomm-k3screenctrl/Makefile        2024-10-15 16:24:40.734595464 +0800
+@@ -9,9 +9,8 @@
+
+ PKG_SOURCE_PROTO:=git
+ PKG_SOURCE_URL:=https://github.com/lwz322/k3screenctrl.git
+-PKG_SOURCE_DATE:=2020-09-18
+-PKG_SOURCE_VERSION:=d8896cfad4bdf39f58999f9420807f986300bada
+-PKG_MIRROR_HASH:=f70e213004887bcbe7eb92c2b5ccc9336e54c9467ae4d39fceece86f2cdfe131
++PKG_SOURCE_DATE:=2023-07-20
++PKG_SOURCE_VERSION:=a2b0678ae85cbe6fd88be5f23deb17e4b656d8ae
+
+ PKG_LICENSE:=GPL-2.0
+ PKG_LICENSE_FILES:=LICENSE
