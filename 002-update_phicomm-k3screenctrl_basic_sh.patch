@@ -36,7 +36,7 @@ diff -Nuar a/lib/k3screenctrl/basic.sh b/lib/k3screenctrl/basic.sh
 +       UPTIME=`uptime | awk -F "," '{print$1}'|awk '{print"" $3"" $4}'`
 +       CPU_used=`vmstat | tail -1 | awk '{ print 100 - $15 }'`         #需要安装PACKAGE_procps-ng包
 +    echo $PRODUCT_NAME@$UPTIME
-+       echo ($CPU_TEMP)C$CPU_used%$LOAD
++       echo $CPU_TEMP*$CPU_used%$LOAD
 +       echo R$((100*$used/$all))%F$(($RAM_free/1024))M
 +    echo $LAN_ADDR
 +    echo $WAN_ADDR
