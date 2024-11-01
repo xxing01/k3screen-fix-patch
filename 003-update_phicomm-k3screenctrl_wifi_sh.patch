@@ -1,5 +1,6 @@
---- lib/k3screenctrl/wifi.sh    2024-10-15 14:09:03.012286755 +0800
-+++ lib/k3screenctrl/my-wifi.sh 2024-11-01 16:19:14.725223951 +0800
+diff -Nuar a/lib/k3screenctrl/wifi.sh b/lib/k3screenctrl/wifi.sh
+--- a/lib/k3screenctrl/wifi.sh    2024-10-15 14:09:03.012286755 +0800
++++ b/lib/k3screenctrl/wifi.sh    2024-11-01 16:19:14.725223951 +0800
 @@ -1,6 +1,8 @@
  #!/bin/sh
  
