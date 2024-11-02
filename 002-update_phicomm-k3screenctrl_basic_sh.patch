@@ -34,7 +34,7 @@ diff -Nuar a/lib/k3screenctrl/basic.sh b/lib/k3screenctrl/basic.sh
 -    echo $DISTRIB_DESCRIPTION
 +    #UPTIME=`uptime | awk -F "," '{print$1}'|awk '{print"up " $3" " $4}'`
 +       UPTIME=`uptime | awk -F "," '{print$1}'|awk '{print"" $3"" $4}'`
-+       CPU_used=`mpstat 1 1| grep -A 5 "%idle" | tail -n 1 | awk -F " " '{print (100 - $12)"%"}'`         #需要安装PACKAGE_procps-ng包
++       CPU_used=`cat <(grep 'cpu ' /proc/stat) <(sleep 1 && grep 'cpu ' /proc/stat) | awk -v RS="" '{printf "%.2f%\n", ($13-$2+$15-$4)*100/($13-$2+$15-$4+$16-$5)}'`         #需要安装PACKAGE_procps-ng包
 +    echo $PRODUCT_NAME@$UPTIME
 +       echo $CPU_TEMP*$CPU_used$LOAD
 +       echo R$((100*$used/$all))%F$(($RAM_free/1024))M
